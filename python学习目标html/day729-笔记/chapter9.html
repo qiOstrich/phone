@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第十一天 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>__new__方法的使用 | 第十一天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter10.html" />
+    
+    
+    <link rel="prev" href="./chapter8.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="9"
+        data-chapter-title="__new__方法的使用"
+        data-filepath="chapter9.md"
+        data-basepath="."
+        data-revision="Tue May 28 2019 08:02:43 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="./chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        私有属性和方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2.html">
+            
+                
+                    <a href="./chapter2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        继承的概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3.html">
+            
+                
+                    <a href="./chapter3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        继承的实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4.html">
+            
+                
+                    <a href="./chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        方法的重写
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5.html">
+            
+                
+                    <a href="./chapter5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        私有成员的继承特点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter6.html">
+            
+                
+                    <a href="./chapter6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        多态
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter7.html">
+            
+                
+                    <a href="./chapter7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        实例属性和类属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter8.html">
+            
+                
+                    <a href="./chapter8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        类方法和静态方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="9" data-path="chapter9.html">
+            
+                
+                    <a href="./chapter9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        __new__方法的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="chapter10.html">
+            
+                
+                    <a href="./chapter10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        单例模式
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >第十一天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="new-&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;"><code>__new__</code> &#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;</h1>
+<h2 id="new&#x548C;init&#x7684;&#x4F5C;&#x7528;"><code>__new__&#x548C;__init__</code>&#x7684;&#x4F5C;&#x7528;</h2>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&quot;&#x8FD9;&#x662F; init &#x65B9;&#x6CD5;&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__new__</span><span class="hljs-params">(cls)</span>:</span>
+        print(<span class="hljs-string">&quot;&#x8FD9;&#x662F; new &#x65B9;&#x6CD5;&quot;</span>)
+        <span class="hljs-keyword">return</span> object.__new__(cls)
+
+A()
+</code></pre>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<ul>
+<li><code>__new__</code>&#x81F3;&#x5C11;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;cls&#xFF0C;&#x4EE3;&#x8868;&#x8981;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x7C7B;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x5728;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x7531;Python&#x89E3;&#x91CA;&#x5668;&#x81EA;&#x52A8;&#x63D0;&#x4F9B;</li>
+<li><code>__new__</code>&#x5FC5;&#x987B;&#x8981;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x8FD4;&#x56DE;&#x5B9E;&#x4F8B;&#x5316;&#x51FA;&#x6765;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x8FD9;&#x70B9;&#x5728;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;<code>__new__</code>&#x65F6;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF0C;&#x53EF;&#x4EE5;return&#x7236;&#x7C7B;<code>__new__</code>&#x51FA;&#x6765;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x662F;object&#x7684;<code>__new__</code>&#x51FA;&#x6765;&#x7684;&#x5B9E;&#x4F8B;</li>
+<li><code>__init__</code>&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;self&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;<code>__new__</code>&#x8FD4;&#x56DE;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;<code>__init__</code>&#x5728;<code>__new__</code>&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x521D;&#x59CB;&#x5316;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;<code>__init__</code>&#x4E0D;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x7C7B;&#x6BD4;&#x4F5C;&#x5236;&#x9020;&#x5546;&#xFF0C;<code>__new__</code>&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x524D;&#x671F;&#x7684;&#x539F;&#x6750;&#x6599;&#x8D2D;&#x4E70;&#x73AF;&#x8282;&#xFF0C;<code>__init__</code>&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x5728;&#x6709;&#x539F;&#x6750;&#x6599;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x52A0;&#x5DE5;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5546;&#x54C1;&#x73AF;&#x8282;</li>
+</ul>
+<h2 id="&#x6CE8;&#x610F;&#x70B9;">&#x6CE8;&#x610F;&#x70B9;</h2>
+<p><img src="imgs/__new__&#x548C;__init__.png" alt=""></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter8.html" class="navigation navigation-prev " aria-label="Previous page: 类方法和静态方法"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter10.html" class="navigation navigation-next " aria-label="Next page: 单例模式"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 第十一天 -->
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第二天 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>类型转换 | 第二天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="./chapter5.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="6"
+        data-chapter-title="类型转换"
+        data-filepath="chapter6.md"
+        data-basepath="."
+        data-revision="Thu Apr 11 2019 08:45:23 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="./chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        注释的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2.html">
+            
+                
+                    <a href="./chapter2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        变量以及类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3.html">
+            
+                
+                    <a href="./chapter3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        标识符和关键字
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4.html">
+            
+                
+                    <a href="./chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        输出
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5.html">
+            
+                
+                    <a href="./chapter5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        输入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="6" data-path="chapter6.html">
+            
+                
+                    <a href="./chapter6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        类型转换
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >第二天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x5E38;&#x89C1;&#x7C7B;&#x578B;&#x8F6C;&#x6362;">&#x5E38;&#x89C1;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h1>
+<table style="text-align:center">
+<tr><th>&#x51FD;&#x6570;</th><th>&#x8BF4;&#x660E;</th></tr>
+
+<tr><td>int(x [,base ])</td><td>&#x5C06;x&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x6570;</td></tr>
+
+<tr><td>float(x)</td><td>&#x5C06;x&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;</td></tr>
+
+<tr><td>str(x)</td><td>&#x5C06;&#x5BF9;&#x8C61; x &#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</td></tr>
+
+<tr><td>bool(x)</td><td>&#x5C06;&#x5BF9;&#x8C61;x&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5E03;&#x5C14;&#x503C;</td></tr>
+</table>
+
+<ul>
+<li>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6574;&#x6570;</li>
+</ul>
+<pre><code class="lang-python">print(int(<span class="hljs-string">&quot;123&quot;</span>))  <span class="hljs-comment"># 123 &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6574;&#x6570;</span>
+
+print(int(<span class="hljs-number">123.78</span>))  <span class="hljs-comment"># 123 &#x5C06;&#x6D6E;&#x70B9;&#x6570;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6574;&#x6570;</span>
+
+print(int(<span class="hljs-keyword">True</span>))  <span class="hljs-comment"># 1 &#x5E03;&#x5C14;&#x503C;True&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6574;&#x6570;&#x662F; 1</span>
+print(int(<span class="hljs-keyword">False</span>)) <span class="hljs-comment"># 0 &#x5E03;&#x5C14;&#x503C;False&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6574;&#x6570;&#x662F; 0</span>
+
+<span class="hljs-comment"># &#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x5C06;&#x4F1A;&#x8F6C;&#x6362;&#x5931;&#x8D25;</span>
+<span class="hljs-string">&apos;&apos;&apos;
+123.456 &#x548C; 12ab &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x90FD;&#x5305;&#x542B;&#x975E;&#x6CD5;&#x5B57;&#x7B26;&#xFF0C;&#x4E0D;&#x80FD;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;
+print(int(&quot;123.456&quot;))
+print(int(&quot;12ab&quot;))
+&apos;&apos;&apos;</span>
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;int()&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x65F6;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x7528;&#x6765;&#x8868;&#x793A;&#x8FDB;&#x5236;&#x3002;</span>
+print(int(<span class="hljs-string">&quot;21&quot;</span>,<span class="hljs-number">8</span>))  <span class="hljs-comment"># &#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x662F;17.&#x516B;&#x8FDB;&#x5236;&#x7684;21,&#x5BF9;&#x5E94;&#x7684;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x662F;17</span>
+print(int(<span class="hljs-string">&quot;F0&quot;</span>,<span class="hljs-number">16</span>)) <span class="hljs-comment"># &#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x662F;240.&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7684;F0,&#x5BF9;&#x5E94;&#x7684;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x662F;240</span>
+
+<span class="hljs-string">&quot;&quot;&quot;
+&#x4EE5;&#x4E0B;&#x5199;&#x6CD5;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x516B;&#x8FDB;&#x5236;&#x91CC;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x503C;&#x662F;7,&#x6240;&#x4EE5; 29 &#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7684;&#x516B;&#x8FDB;&#x5236;&#x6570;
+print(int(&quot;29&quot;,8))
+&quot;&quot;&quot;</span>
+</code></pre>
+<ul>
+<li>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;</li>
+</ul>
+<pre><code class="lang-python">f1 = float(<span class="hljs-string">&quot;12.34&quot;</span>)
+print(f1)   <span class="hljs-comment"># 12.34</span>
+print(type(f1)) <span class="hljs-comment"># float &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x7684; &quot;12.34&quot; &#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x6D6E;&#x70B9;&#x6570; 12.34</span>
+
+f2 = float(<span class="hljs-number">23</span>)
+print(f2)  <span class="hljs-comment"># 23.0</span>
+print(type(f2)) <span class="hljs-comment"># float &#x5C06;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E86;&#x6D6E;&#x70B9;&#x6570;</span>
+</code></pre>
+<ul>
+<li>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+<pre><code class="lang-python">str1 = str(<span class="hljs-number">45</span>)
+str2 = str(<span class="hljs-number">34.56</span>)
+str3 = str(<span class="hljs-keyword">True</span>)
+print(type(str1),type(str2),type(str3))
+</code></pre>
+<ul>
+<li>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5E03;&#x5C14;&#x503C;<pre><code class="lang-python">print(bool(<span class="hljs-string">&apos;&apos;</span>))
+print(bool(<span class="hljs-string">&quot;&quot;</span>))
+print(bool(<span class="hljs-number">0</span>))
+print(bool({}))
+print(bool([])&#xFF09;
+print(bool(())&#xFF09;
+print(bool(<span class="hljs-keyword">None</span>)&#xFF09;
+</code></pre>
+</li>
+</ul>
+<p><span style="color:red;font-weight:700">&#x5728;python&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;<code>&apos;&apos;,&quot;&quot;</code>&#xFF0C;&#x6570;&#x5B57;0,&#x7A7A;&#x5B57;&#x5178;{},&#x7A7A;&#x5217;&#x8868;[],&#x7A7A;&#x5143;&#x7EC4;(),&#x548C;&#x7A7A;&#x6570;&#x636E;None&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x4E3A;False,&#x5176;&#x4ED6;&#x7684;&#x90FD;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x4E3A;True</span></p>
+<h1 id="&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E86;&#x89E3;">&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x8F6C;&#x6362;(&#x4E86;&#x89E3;)</h1>
+<table style="text-align:center">
+<tr><td>eval(str)</td><td>&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6709;&#x6548;Python&#x8868;&#x8FBE;&#x5F0F;,&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</td></tr>
+
+
+
+<tr><td>chr(x)</td><td>&#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;Unicode&#x5B57;&#x7B26;</td></tr>
+
+<tr><td>ord(x)</td><td>&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;&#x5B83;&#x7684;ASCII&#x6574;&#x6570;&#x503C;</td></tr>
+
+<tr><td>hex(x)</td><td>&#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;</td></tr>
+
+<tr><td>oct(x)</td><td>&#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x516B;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;</td></tr>
+
+<tr><td>bin(x)</td><td>&#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;</td></tr>
+
+<tr><td>tuple(s)</td><td>&#x5C06;&#x5E8F;&#x5217; s &#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;</td></tr>
+
+<tr><td>list(s )</td><td>&#x5C06;&#x5E8F;&#x5217; s &#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x5217;&#x8868;</td></tr>
+
+</table>
+
+<h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
+<pre><code class="lang-python">&gt;&gt;&gt; # str() : &#x8F6C;&#x6362;&#x4E3A; &#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;
+... num1 = 10
+&gt;&gt;&gt; f1 = 3.14
+&gt;&gt;&gt; 
+&gt;&gt;&gt; print(type(str(num1)))
+&lt;class &apos;str&apos;&gt;
+&gt;&gt;&gt; print(type(str(f1)))
+&lt;class &apos;str&apos;&gt;
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # repr()&#xFF1A; &#x8F6C;&#x6362;&#x4E3A;&#x8868;&#x8FBE;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;
+... num1 = 10
+&gt;&gt;&gt; print(type(repr(num1)))
+&lt;class &apos;str&apos;&gt;
+&gt;&gt;&gt; 
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # eval(): &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x539F;&#x672C;&#x7684;&#x7C7B;&#x578B;
+... str1 = &quot;3.14&quot;
+&gt;&gt;&gt; print(type(eval(str1)))
+&lt;class &apos;float&apos;&gt;
+&gt;&gt;&gt; 
+&gt;&gt;&gt; str2 = &quot;[10, 20, 30]&quot;
+&gt;&gt;&gt; l = eval(str2)
+&gt;&gt;&gt; print(type(l))
+&lt;class &apos;list&apos;&gt;
+&gt;&gt;&gt; 
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # chr: &#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684; Unicode &#x5B57;&#x7B26;
+... s = chr(1065)
+&gt;&gt;&gt; print(s)
+&#x429;
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # ord &#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x6570;&#x5B57;
+... n = ord(&quot;A&quot;)
+&gt;&gt;&gt; print(n)
+65
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # bin: &#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;
+... print(bin(1024)) # 0b &#x5F00;&#x5934;&#x8868;&#x793A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;
+0b10000000000
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # oct&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x516B;&#x8FDB;&#x5236;
+... print(oct(1024)) # 0o &#x5F00;&#x5934;&#x8868;&#x793A;&#x516B;&#x8FDB;&#x5236;&#x6570;
+0o2000
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # hex: &#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x5341;&#x516D;&#x8FDB;&#x5236;
+... print(hex(1024)) # 0x &#x5F00;&#x5934;&#x8868;&#x793A;&#x5341;&#x516D;&#x8FDB;&#x5236;
+0x400
+&gt;&gt;&gt;
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter5.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 输入"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 第二天 -->
+</html>

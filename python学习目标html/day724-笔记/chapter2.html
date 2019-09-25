@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第八天 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>嵌套函数 | 第八天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter3.html" />
+    
+    
+    <link rel="prev" href="./chapter1.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="2"
+        data-chapter-title="嵌套函数"
+        data-filepath="chapter2.md"
+        data-basepath="."
+        data-revision="Fri Apr 19 2019 07:32:42 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="./chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        高阶函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2" data-path="chapter2.html">
+            
+                
+                    <a href="./chapter2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        嵌套函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3.html">
+            
+                
+                    <a href="./chapter3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        闭包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4.html">
+            
+                
+                    <a href="./chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        装饰器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5.html">
+            
+                
+                    <a href="./chapter5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        名片管理系统
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >第八天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x51FD;&#x6570;&#x5D4C;&#x5957;">&#x51FD;&#x6570;&#x5D4C;&#x5957;</h1>
+<p>&#x5728;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x591A;&#x5C42;&#xFF0C;&#x6267;&#x884C;&#x9700;&#x8981;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">outer</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">&apos;outer----hello&apos;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner</span><span class="hljs-params">()</span>:</span>  <span class="hljs-comment"># inner&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5728;outer&#x51FD;&#x6570;&#x5185;&#x90E8;&#x5B9A;&#x4E49;&#x7684;</span>
+        print(<span class="hljs-string">&apos;inner----hello&apos;</span>)
+    inner()  <span class="hljs-comment"># inner&#x51FD;&#x6570;&#x53EA;&#x5728;outer&#x51FD;&#x6570;&#x5185;&#x90E8;&#x53EF;&#x89C1;</span>
+
+outer()
+<span class="hljs-comment"># inner()  &#x8FD9;&#x91CC;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x5728;outer&#x51FD;&#x6570;&#x5916;&#x90E8;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x5230;inner&#x51FD;&#x6570;</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter1.html" class="navigation navigation-prev " aria-label="Previous page: 高阶函数"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter3.html" class="navigation navigation-next " aria-label="Next page: 闭包"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 第八天 -->
+</html>

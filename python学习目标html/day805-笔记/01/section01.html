@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第十四天 -->
+<!-- Start book 第十四天 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>base64编码 | 第十四天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../01/section02.html" />
+    
+    
+    <link rel="prev" href="../chapter01.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="1.1"
+        data-chapter-title="base64编码"
+        data-filepath="01/section01.md"
+        data-basepath=".."
+        data-revision="Fri May 31 2019 07:36:50 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="../chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        加密方式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1" data-path="01/section01.html">
+            
+                
+                    <a href="../01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        base64编码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01/section02.html">
+            
+                
+                    <a href="../01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        常见加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01/section03.html">
+            
+                
+                    <a href="../01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Python自带加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01/section04.html">
+            
+                
+                    <a href="../01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Pycryptodome第三方库
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="../chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        uuid
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="../chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        深拷贝与浅拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="../chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        property属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="../chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        魔法属性
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >第十四天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="base64&#x7F16;&#x7801;">Base64&#x7F16;&#x7801;</h1>
+<p>Base64&#x662F;&#x4E00;&#x79CD;&#x7528;64&#x4E2A;&#x5B57;&#x7B26;&#x6765;&#x8868;&#x793A;&#x4EFB;&#x610F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;&#x5BC6;&#x7801;&#x5B66;&#x7684;&#x57FA;&#x77F3;&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x4EFB;&#x610F;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x8FDB;&#x884C;Base64&#x7F16;&#x7801;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x80FD;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x5E76;&#x53EA;&#x7528;65&#x4E2A;&#x5B57;&#x7B26;&#x5C31;&#x80FD;&#x8868;&#x793A;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;</p>
+<p>Base64&#x7801;&#x8868;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>A</strong></td>
+<td>17</td>
+<td><strong>R</strong></td>
+<td>34</td>
+<td><strong>i</strong></td>
+<td>51</td>
+<td><strong>z</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>B</strong></td>
+<td>18</td>
+<td><strong>S</strong></td>
+<td>35</td>
+<td><strong>j</strong></td>
+<td>52</td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>C</strong></td>
+<td>19</td>
+<td><strong>T</strong></td>
+<td>36</td>
+<td><strong>k</strong></td>
+<td>53</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>D</strong></td>
+<td>20</td>
+<td><strong>U</strong></td>
+<td>37</td>
+<td><strong>l</strong></td>
+<td>54</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>E</strong></td>
+<td>21</td>
+<td><strong>V</strong></td>
+<td>38</td>
+<td><strong>m</strong></td>
+<td>55</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>F</strong></td>
+<td>22</td>
+<td><strong>W</strong></td>
+<td>39</td>
+<td><strong>n</strong></td>
+<td>56</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>G</strong></td>
+<td>23</td>
+<td><strong>X</strong></td>
+<td>40</td>
+<td><strong>o</strong></td>
+<td>57</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>H</strong></td>
+<td>24</td>
+<td><strong>Y</strong></td>
+<td>41</td>
+<td><strong>p</strong></td>
+<td>58</td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>I</strong></td>
+<td>25</td>
+<td><strong>Z</strong></td>
+<td>42</td>
+<td><strong>q</strong></td>
+<td>59</td>
+<td><strong>7</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>J</strong></td>
+<td>26</td>
+<td><strong>a</strong></td>
+<td>43</td>
+<td><strong>r</strong></td>
+<td>60</td>
+<td><strong>8</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>K</strong></td>
+<td>27</td>
+<td><strong>b</strong></td>
+<td>44</td>
+<td><strong>s</strong></td>
+<td>61</td>
+<td><strong>9</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>L</strong></td>
+<td>28</td>
+<td><strong>c</strong></td>
+<td>45</td>
+<td><strong>t</strong></td>
+<td>62</td>
+<td><strong>+</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>M</strong></td>
+<td>29</td>
+<td><strong>d</strong></td>
+<td>46</td>
+<td><strong>u</strong></td>
+<td>63</td>
+<td><strong>/</strong></td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>N</strong></td>
+<td>30</td>
+<td><strong>e</strong></td>
+<td>47</td>
+<td><strong>v</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>O</strong></td>
+<td>31</td>
+<td><strong>f</strong></td>
+<td>48</td>
+<td><strong>w</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>P</strong></td>
+<td>32</td>
+<td><strong>g</strong></td>
+<td>49</td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Q</strong></td>
+<td>33</td>
+<td><strong>h</strong></td>
+<td>50</td>
+<td><strong>y</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x539F;&#x7406;&#x4E86;&#x89E3;">&#x539F;&#x7406;(&#x4E86;&#x89E3;)</h2>
+<p>&#x8F6C;&#x7801;&#x7684;&#x6838;&#x5FC3;&#x5728;&#x4E8E;&#xFF1A; <code>3*8=4*6</code></p>
+<ul>
+<li><p>&#x8981;&#x8F6C;&#x5316;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x80FD;&#x88AB;3&#x6574;&#x9664;</p>
+<blockquote>
+<p>&#x8981;&#x5BF9;&#x5B57;&#x7B26;&#x4E32; &apos;abc&apos; &#x8FDB;&#x884C;Base64&#x52A0;&#x5BC6;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x62FF;&#x5230; abc &#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x3002;abc &#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x8282;&#x5206;&#x522B;&#x5BF9;&#x5E94; 97,98,99</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x516B;&#x4E2A;&#x4E00;&#x4F4D;&#xFF1A; 01100001 01100010  01100011</p>
+<p>&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;6&#x4E2A;&#x4E00;&#x7EC4;&#xFF1A;011000 010110 001001 100011</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5341;&#x8FDB;&#x5236;:                           24         22            9          35</p>
+<p>&#x5BF9;&#x7167;Base64&#x7801;&#x8868;:           YWJj   </p>
+</blockquote>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5B57;&#x7B26;&#x4E32; abc &#x8FDB;&#x884C;64&#x4E3A;&#x52A0;&#x5BC6;&#x4EE5;&#x540E;&#x5C31;&#x662F; YWJj</p>
+</li>
+<li><p>&#x8981;&#x8F6C;&#x6362;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9664;&#x4EE5;3&#x4F59;2</p>
+<blockquote>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32; ab &#x8FDB;&#x884C;Base64&#x52A0;&#x5BC6;</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x516B;&#x4E2A;&#x4E00;&#x4F4D;&#xFF1A; 01100001 01100010</p>
+<p>&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;6&#x4E2A;&#x4E00;&#x7EC4;: 011000 010110 0010<strong>00</strong> &#x6700;&#x540E;&#x53EA;&#x5269;&#x4E0B;&#x56DB;&#x4F4D;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6700;&#x540E;&#x8865;0</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#xFF1A;                  24     22     8</p>
+<p>&#x5BF9;&#x7167;Base64&#x7801;&#x8868;&#xFF1A;              YWI<strong>=</strong>    &#x4F7F;&#x7528;&#x4E00;&#x4E2A; =  &#x6765;&#x8868;&#x793A;&#xFF0C;&#x6700;&#x540E;&#x9762;&#x8865;&#x4E86;&#x4E24;&#x4E2A;0</p>
+</blockquote>
+</li>
+<li><p>&#x8981;&#x8F6C;&#x5316;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9664;&#x4EE5;3&#x4F59;1</p>
+<blockquote>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32; a &#x8FDB;&#x884C; Base64&#x52A0;&#x5BC6;</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x516B;&#x4E2A;&#x4E00;&#x4F4D;&#xFF1A;   01100001</p>
+<p>&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;6&#x4E2A;&#x4E00;&#x7EC4;:   011000 01<strong>0000</strong>  &#x6700;&#x540E;&#x53EA;&#x5269;&#x4E0B;&#x4E24;&#x4F4D;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x540E;&#x9762;&#x8865;&#x56DB;&#x4E2A;0</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#xFF1A;                     24           16</p>
+<p>&#x5BF9;&#x7167;Base64&#x7801;&#x8868;&#xFF1A;                      YQ<strong>==</strong>  &#x4F7F;&#x7528;&#x4E24;&#x4E2A; = &#x6765;&#x8868;&#x793A;&#xFF0C;&#x6700;&#x540E;&#x9762;&#x8865;&#x4E86;&#x56DB;&#x4E2A;0</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="python&#x4E2D;&#x5B9E;&#x73B0;base64&#x7F16;&#x7801;">Python&#x4E2D;&#x5B9E;&#x73B0;Base64&#x7F16;&#x7801;</h2>
+<p>Python&#x4E2D;&#x7684;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF0C;&#x90FD;&#x662F;&#x5148;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x3002;&#x5728;&#x8FDB;&#x884C;base64&#x7F16;&#x7801;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x9700;&#x8981;&#x5148;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;Bytes,&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;</p>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x548C;<code>Bytes</code>&#x4E92;&#x76F8;&#x8F6C;&#x6362;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>encode()</code>&#x548C;<code>decode()</code>&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python">str1 = <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+bs = str1.encode() <span class="hljs-comment"># &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x5217;&#x8868;</span>
+print(bs) <span class="hljs-comment"># b&apos;\xe4\xbd\xa0\xe5\xa5\xbd&apos;</span>
+print(type(bs)) <span class="hljs-comment"># bytes</span>
+
+bs.decode()  <span class="hljs-comment"># &#x5C06;&#x4E8C;&#x8FDB;&#x5236;&#x5217;&#x8868;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</span>
+</code></pre>
+<p>&#x5BF9;Bytes&#x8FDB;&#x884C;Base64&#x7F16;&#x7801;:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> base64
+
+str1 = <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+str_bytes = str1.encode()  <span class="hljs-comment"># &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;bytes</span>
+b64_value = base64.b64encode() <span class="hljs-comment"># &#x5C06;bytes&#x8FDB;&#x884C;bae64&#x7F16;&#x7801;</span>
+print(b64_value)
+value = base64.b64decode(b64_value)  <span class="hljs-comment"># &#x5C06;base64&#x7F16;&#x7801;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#xFF0C;&#x5F97;&#x5230;bytes</span>
+print(value.decode()) <span class="hljs-comment"># &#x5C06;bytes&#x89E3;&#x7801;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</span>
+</code></pre>
+<p>Base64&#x4E25;&#x683C;&#x610F;&#x4E49;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;&#x7B97;&#x4E0D;&#x4E0A;&#x662F;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x7684;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#x662F;&#x516C;&#x5F00;&#x53EF;&#x9006;&#x7684;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter01.html" class="navigation navigation-prev " aria-label="Previous page: 加密方式"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../01/section02.html" class="navigation navigation-next " aria-label="Next page: 常见加密算法"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book 第十四天 -->
+<!-- End of book 第十四天 -->
+</html>

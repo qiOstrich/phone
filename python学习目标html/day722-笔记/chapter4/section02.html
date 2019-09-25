@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第五天 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>字典遍历 | 第五天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter5.html" />
+    
+    
+    <link rel="prev" href="../chapter4/section01.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="4.2"
+        data-chapter-title="字典遍历"
+        data-filepath="chapter4/section02.md"
+        data-basepath=".."
+        data-revision="Mon Jun 24 2019 22:25:56 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="../chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        字符串的常见操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter1/section01.html">
+            
+                
+                    <a href="../chapter1/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        字符串输出
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1/section02.html">
+            
+                
+                    <a href="../chapter1/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        字符串输入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter1/section03.html">
+            
+                
+                    <a href="../chapter1/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        字符串和切片
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter1/section04.html">
+            
+                
+                    <a href="../chapter1/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        字符串的常用方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2.html">
+            
+                
+                    <a href="../chapter2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        列表的常见操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter2/section01.html">
+            
+                
+                    <a href="../chapter2/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        列表的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter2/section02.html">
+            
+                
+                    <a href="../chapter2/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        列表的循环遍历
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter2/section03.html">
+            
+                
+                    <a href="../chapter2/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        列表的嵌套（难点）
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3.html">
+            
+                
+                    <a href="../chapter3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        元组的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4.html">
+            
+                
+                    <a href="../chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        字典的常见操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter4/section01.html">
+            
+                
+                    <a href="../chapter4/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        字典的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="chapter4/section02.html">
+            
+                
+                    <a href="../chapter4/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        字典遍历
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5.html">
+            
+                
+                    <a href="../chapter5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        set的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter6.html">
+            
+                
+                    <a href="../chapter6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        公共方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter7.html">
+            
+                
+                    <a href="../chapter7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        str.format方法的使用
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >第五天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x904D;&#x5386;">&#x904D;&#x5386;</h1>
+<p>&#x901A;&#x8FC7;for ... in ... &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x5B57;&#x5178;&#x7B49;</p>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x904D;&#x5386;">&#x5B57;&#x7B26;&#x4E32;&#x904D;&#x5386;</h2>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>a_str = <span class="hljs-string">&quot;hello world&quot;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> char <span class="hljs-keyword">in</span> a_str:
+<span class="hljs-prompt">... </span>    print(char,end=<span class="hljs-string">&apos; &apos;</span>)
+...
+h e l l o   w o r l d
+</code></pre>
+<h2 id="&#x5217;&#x8868;&#x904D;&#x5386;">&#x5217;&#x8868;&#x904D;&#x5386;</h2>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>a_list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> a_list:
+<span class="hljs-prompt">... </span>    print(num,end=<span class="hljs-string">&apos; &apos;</span>)
+...
+<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
+</code></pre>
+<h2 id="&#x5143;&#x7EC4;&#x904D;&#x5386;">&#x5143;&#x7EC4;&#x904D;&#x5386;</h2>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>a_turple = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> a_turple:
+<span class="hljs-prompt">... </span>    print(num,end=<span class="hljs-string">&quot; &quot;</span>)
+<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
+</code></pre>
+<h2 id="&#x5B57;&#x5178;&#x904D;&#x5386;">&#x5B57;&#x5178;&#x904D;&#x5386;</h2>
+<h4 id="&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;key&#xFF08;&#x952E;&#xFF09;"><1> &#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;key&#xFF08;&#x952E;&#xFF09;</1></h4>
+<p><img src="../imgs/keys.png" alt=""></p>
+<h4 id="&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;value&#xFF08;&#x503C;&#xFF09;"><2> &#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;value&#xFF08;&#x503C;&#xFF09;</2></h4>
+<p><img src="../imgs/values.png" alt=""></p>
+<h4 id="&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;&#x9879;&#xFF08;&#x5143;&#x7D20;&#xFF09;"><3> &#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;&#x9879;&#xFF08;&#x5143;&#x7D20;&#xFF09;</3></h4>
+<p><img src="../imgs/items.png" alt=""></p>
+<h4 id="&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;keyvalue&#xFF08;&#x952E;&#x503C;&#x5BF9;&#xFF09;"><4> &#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;key-value&#xFF08;&#x952E;&#x503C;&#x5BF9;&#xFF09;</4></h4>
+<p><img src="../imgs/keyvalues.png" alt=""></p>
+<h2 id="&#x60F3;&#x4E00;&#x60F3;&#xFF0C;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x5E26;&#x4E0B;&#x6807;&#x7D22;&#x5F15;&#x7684;&#x5217;&#x8868;&#x904D;&#x5386;">&#x60F3;&#x4E00;&#x60F3;&#xFF0C;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x5E26;&#x4E0B;&#x6807;&#x7D22;&#x5F15;&#x7684;&#x5217;&#x8868;&#x904D;&#x5386;</h2>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>chars = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>]
+<span class="hljs-prompt">&gt;&gt;&gt; </span>i = <span class="hljs-number">0</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> chr <span class="hljs-keyword">in</span> chars:
+<span class="hljs-prompt">... </span>    print(<span class="hljs-string">&quot;%d %s&quot;</span>%(i, chr))
+<span class="hljs-prompt">... </span>    i += <span class="hljs-number">1</span>
+...
+<span class="hljs-number">0</span> a
+<span class="hljs-number">1</span> b
+<span class="hljs-number">2</span> c
+<span class="hljs-number">3</span> d
+</code></pre>
+<h2 id="enumerate">enumerate()</h2>
+<blockquote>
+<p>enumerate() &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x5C06;&#x4E00;&#x4E2A;&#x53EF;&#x904D;&#x5386;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;(&#x5982;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x6216;&#x5B57;&#x7B26;&#x4E32;)&#x7EC4;&#x5408;&#x4E3A;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x5E8F;&#x5217;&#xFF0C;&#x540C;&#x65F6;&#x5217;&#x51FA;&#x6570;&#x636E;&#x548C;&#x6570;&#x636E;&#x4E0B;&#x6807;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x5728; for &#x5FAA;&#x73AF;&#x5F53;&#x4E2D;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>chars = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>]
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i, chr <span class="hljs-keyword">in</span> enumerate(chars):
+<span class="hljs-prompt">... </span>    print(<span class="hljs-string">&quot;%d %s&quot;</span>%(i, chr))
+...
+<span class="hljs-number">0</span> a
+<span class="hljs-number">1</span> b
+<span class="hljs-number">2</span> c
+<span class="hljs-number">3</span> d
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter4/section01.html" class="navigation navigation-prev " aria-label="Previous page: 字典的增删改查"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter5.html" class="navigation navigation-next " aria-label="Next page: set的使用"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 第五天 -->
+</html>

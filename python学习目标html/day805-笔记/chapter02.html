@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第十四天 -->
+<!-- Start book 第十四天 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>uuid | 第十四天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter03.html" />
+    
+    
+    <link rel="prev" href="./01/section04.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="2"
+        data-chapter-title="uuid"
+        data-filepath="chapter02.md"
+        data-basepath="."
+        data-revision="Fri May 31 2019 07:36:50 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        加密方式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01/section01.html">
+            
+                
+                    <a href="./01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        base64编码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01/section02.html">
+            
+                
+                    <a href="./01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        常见加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01/section03.html">
+            
+                
+                    <a href="./01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Python自带加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01/section04.html">
+            
+                
+                    <a href="./01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Pycryptodome第三方库
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        uuid
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        深拷贝与浅拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        property属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        魔法属性
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >第十四天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="uuid">UUID</h1>
+<p>uuid&#x662F;128&#x4F4D;&#x7684;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;&#xFF08;univeral unique identifier&#xFF09;&#xFF0C;&#x901A;&#x5E38;&#x7528;32&#x4F4D;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x8868;&#x73B0;&#xFF0C;&#x6709;&#x65F6;&#x4E5F;&#x79F0;guid(global unique identifier)&#x3002;python&#x4E2D;&#x81EA;&#x5E26;&#x4E86;uuid&#x6A21;&#x5757;&#x6765;&#x8FDB;&#x884C;uuid&#x7684;&#x751F;&#x6210;&#x548C;&#x7BA1;&#x7406;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>python&#x4E2D;&#x7684;uuid&#x6A21;&#x5757;&#x57FA;&#x4E8E;&#x4FE1;&#x606F;&#x5982;MAC&#x5730;&#x5740;&#x3001;&#x65F6;&#x95F4;&#x6233;&#x3001;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3001;&#x968F;&#x673A;&#x6570;&#x3001;&#x4F2A;&#x968F;&#x673A;&#x6570;&#x6765;uuid&#x3002;&#x5177;&#x4F53;&#x65B9;&#x6CD5;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uuid.uuid1()</td>
+<td>&#x57FA;&#x4E8E;MAC&#x5730;&#x5740;&#xFF0C;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x968F;&#x673A;&#x6570;&#x6765;&#x751F;&#x6210;&#x552F;&#x4E00;&#x7684;uuid&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5168;&#x7403;&#x8303;&#x56F4;&#x5185;&#x7684;&#x552F;&#x4E00;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>uuid.uuid2()</td>
+<td>&#x7B97;&#x6CD5;&#x4E0E;uuid1&#x76F8;&#x540C;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x628A;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x524D;4&#x4F4D;&#x7F6E;&#x6362;&#x4E3A;POSIX&#x7684;UID&#x3002;&#x4E0D;&#x8FC7;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;python&#x4E2D;&#x6CA1;&#x6709;&#x57FA;&#x4E8E;DCE&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;python&#x7684;uuid&#x6A21;&#x5757;&#x4E2D;&#x6CA1;&#x6709;uuid2&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</td>
+</tr>
+<tr>
+<td>uuid.uuid3(namespace,name)</td>
+<td>&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x548C;&#x540D;&#x5B57;&#x7684;md5&#x6563;&#x5217;&#x503C;&#x6765;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;uuid&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x540D;&#x5B57;&#x5177;&#x6709;&#x4E0D;&#x540C;&#x7684;uuid&#xFF0C;&#x4F46;&#x662F;&#x76F8;&#x540C;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x662F;&#x76F8;&#x540C;&#x7684;uuid&#x4E86;&#x3002;namespace&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x5176;&#x4ED6;&#x91CF;&#xFF0C;&#x800C;&#x662F;&#x5728;uuid&#x6A21;&#x5757;&#x4E2D;&#x672C;&#x8EAB;&#x7ED9;&#x51FA;&#x7684;&#x4E00;&#x4E9B;&#x503C;&#x3002;&#x6BD4;&#x5982;uuid.NAMESPACE_DNS&#xFF0C;uuid.NAMESPACE_OID&#xFF0C;uuid.NAMESPACE_OID&#x8FD9;&#x4E9B;&#x503C;&#x3002;&#x8FD9;&#x4E9B;&#x503C;&#x672C;&#x8EAB;&#x4E5F;&#x662F;UUID&#x5BF9;&#x8C61;&#xFF0C;&#x6839;&#x636E;&#x4E00;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#x8BA1;&#x7B97;&#x5F97;&#x51FA;&#x3002;</td>
+</tr>
+<tr>
+<td>uuid.uuid4()</td>
+<td>&#x901A;&#x8FC7;&#x4F2A;&#x968F;&#x673A;&#x6570;&#x5F97;&#x5230;uuid&#xFF0C;&#x662F;&#x6709;&#x4E00;&#x5B9A;&#x6982;&#x7387;&#x91CD;&#x590D;&#x7684;</td>
+</tr>
+<tr>
+<td>uuid.uuid5(namespace,name)</td>
+<td>&#x548C;uuid3&#x57FA;&#x672C;&#x76F8;&#x540C;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x91C7;&#x7528;&#x7684;&#x6563;&#x5217;&#x7B97;&#x6CD5;&#x662F;sha1</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x5728;&#x5BF9;uuid&#x7684;&#x9700;&#x6C42;&#x4E0D;&#x662F;&#x5F88;&#x590D;&#x6742;&#x7684;&#x65F6;&#x5019;&#xFF0C;uuid1&#x6216;&#x8005;uuid4&#x65B9;&#x6CD5;&#x5C31;&#x5DF2;&#x7ECF;&#x591F;&#x7528;&#x4E86;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> uuid
+
+print(uuid.uuid1())  <span class="hljs-comment"># &#x6839;&#x636E;&#x65F6;&#x95F4;&#x6233;&#x548C;&#x673A;&#x5668;&#x7801;&#x751F;&#x6210;uuid,&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5168;&#x7403;&#x552F;&#x4E00;</span>
+print(uuid.uuid4())  <span class="hljs-comment"># &#x968F;&#x673A;&#x751F;&#x6210;uuid,&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x91CD;&#x590D;</span>
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x751F;&#x6210;uuid.</span>
+<span class="hljs-comment"># &#x6CE8;&#x610F;&#x4E00;&#x4E0B;&#x4E24;&#x70B9;:</span>
+<span class="hljs-comment"># 1. &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0D;&#x662F;&#x968F;&#x610F;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B83;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;uuid&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-comment"># 2. &#x76F8;&#x540C;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x548C;&#x60F3;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x751F;&#x6210;&#x7684;uuid&#x662F;&#x4E00;&#x6837;&#x7684;</span>
+print(uuid.uuid3(uuid.NAMESPACE_DNS, <span class="hljs-string">&apos;hello&apos;</span>))
+print(uuid.uuid5(uuid.NAMESPACE_OID, <span class="hljs-string">&apos;hello&apos;</span>))
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./01/section04.html" class="navigation navigation-prev " aria-label="Previous page: Pycryptodome第三方库"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter03.html" class="navigation navigation-next " aria-label="Next page: 深拷贝与浅拷贝"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book 第十四天 -->
+<!-- End of book 第十四天 -->
+</html>

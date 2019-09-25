@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第十二天 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>模块中的__all__ | 第十二天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter3/section04.html" />
+    
+    
+    <link rel="prev" href="../chapter3/section02.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="3.3"
+        data-chapter-title="模块中的__all__"
+        data-filepath="chapter3/section03.md"
+        data-basepath=".."
+        data-revision="Sun Apr 14 2019 23:14:22 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="../chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        射击游戏
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2/index.html">
+            
+                
+                    <a href="../chapter2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        异常
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter2/section01.html">
+            
+                
+                    <a href="../chapter2/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        捕获异常
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter2/section02.html">
+            
+                
+                    <a href="../chapter2/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        with的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter2/section03.html">
+            
+                
+                    <a href="../chapter2/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        异常的传递
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter2/section04.html">
+            
+                
+                    <a href="../chapter2/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        自定义异常
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="chapter2/section05.html">
+            
+                
+                    <a href="../chapter2/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        异常处理时抛出异常
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3/index.html">
+            
+                
+                    <a href="../chapter3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter3/section01.html">
+            
+                
+                    <a href="../chapter3/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        导入模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter3/section02.html">
+            
+                
+                    <a href="../chapter3/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        制作模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="chapter3/section03.html">
+            
+                
+                    <a href="../chapter3/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        模块中的__all__
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="chapter3/section04.html">
+            
+                
+                    <a href="../chapter3/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        python中的包
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4.html">
+            
+                
+                    <a href="../chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        python2和Python3的区别
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >第十二天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6A21;&#x5757;&#x4E2D;&#x7684;all">&#x6A21;&#x5757;&#x4E2D;&#x7684;<code>__all__</code></h1>
+<h2 id="1-&#x6CA1;&#x6709;all">1. &#x6CA1;&#x6709;<code>__all__</code></h2>
+<p><code>test.py</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span><span class="hljs-params">(object)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span><span class="hljs-params">(self)</span>:</span>
+    print(<span class="hljs-string">&apos;----Test&#x7C7B;&#x4E2D;&#x7684;test&#x65B9;&#x6CD5;------&apos;</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span>:</span>
+  print(<span class="hljs-string">&apos;---test1&#x51FD;&#x6570;---&apos;</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span>:</span>
+  print(<span class="hljs-string">&apos;---test2&#x51FD;&#x6570;---&apos;</span>)
+</code></pre>
+<p><code>main.py</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> test <span class="hljs-keyword">import</span> *
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x91CC;&#x7684;&#x6240;&#x6709;&#x51FD;&#x6570;</span>
+test1()
+test2()
+
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x91CC;&#x7684;&#x7C7B;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+a = Test()
+a.test()
+</code></pre>
+<h2 id="2-&#x6A21;&#x5757;&#x4E2D;&#x6709;all">2. &#x6A21;&#x5757;&#x4E2D;&#x6709;<code>__all__</code></h2>
+<p><code>test.py</code>&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x7ED9; test.py &#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x4E86;__all__&#x5C5E;&#x6027;&#xFF0C;&#x53EA;&#x6709;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x88AB;&#x5BFC;&#x5165;</span>
+__all__ = [<span class="hljs-string">&quot;Test&quot;</span>,<span class="hljs-string">&quot;test2&quot;</span>]  <span class="hljs-comment"># &#x7531;Test&#x7C7B;&#x548C;test2&#x65B9;&#x6CD5;&#xFF0C;&#x6CA1;&#x6709;test1&#x65B9;&#x6CD5;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span><span class="hljs-params">(object)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span><span class="hljs-params">(self)</span>:</span>
+    print(<span class="hljs-string">&apos;----Test&#x7C7B;&#x4E2D;&#x7684;test&#x65B9;&#x6CD5;------&apos;</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span>:</span>
+  print(<span class="hljs-string">&apos;---test1&#x51FD;&#x6570;---&apos;</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span>:</span>
+  print(<span class="hljs-string">&apos;---test2&#x51FD;&#x6570;---&apos;</span>)
+</code></pre>
+<p><code>main.py</code>&#x6587;&#x4EF6;&#x5185;&#x5BB9;:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> test <span class="hljs-keyword">import</span> *
+
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x4F7F;&#x7528;test2&#x65B9;&#x6CD5;</span>
+test2()
+
+<span class="hljs-comment"># &#x4E0D;&#x80FD;&#x4F7F;&#x7528;test1()&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;test1&#x4E0D;&#x5728;__all__&#x5C5E;&#x6027;&#x91CC;&#xFF01;</span>
+<span class="hljs-comment">#test1()</span>
+
+<span class="hljs-comment"># &#x53EF;&#x4EE5;&#x4F7F;&#x7528;Test&#x8FD9;&#x4E2A;&#x7C7B;</span>
+a = Test()
+a.test()
+</code></pre>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<ul>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x6709;<code>__all__</code>&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;<code>__all__</code>&#x5C5E;&#x6027;&#x91CC;<span style="color:red">&#x6CA1;&#x6709;&#x5217;&#x51FA;&#x7684;&#x5143;&#x7D20;</span>&#xFF0C;&#x5728;<code>from xxx import *</code>&#x5BFC;&#x5165;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x5BFC;&#x5165;&#x3002;</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter3/section02.html" class="navigation navigation-prev " aria-label="Previous page: 制作模块"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter3/section04.html" class="navigation navigation-next " aria-label="Next page: python中的包"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 第十二天 -->
+</html>

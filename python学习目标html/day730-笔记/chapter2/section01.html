@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第十二天 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>捕获异常 | 第十二天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter2/section02.html" />
+    
+    
+    <link rel="prev" href="../chapter2/index.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="2.1"
+        data-chapter-title="捕获异常"
+        data-filepath="chapter2/section01.md"
+        data-basepath=".."
+        data-revision="Sun Apr 14 2019 23:14:22 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="../chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        射击游戏
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2/index.html">
+            
+                
+                    <a href="../chapter2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        异常
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="chapter2/section01.html">
+            
+                
+                    <a href="../chapter2/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        捕获异常
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter2/section02.html">
+            
+                
+                    <a href="../chapter2/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        with的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter2/section03.html">
+            
+                
+                    <a href="../chapter2/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        异常的传递
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter2/section04.html">
+            
+                
+                    <a href="../chapter2/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        自定义异常
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="chapter2/section05.html">
+            
+                
+                    <a href="../chapter2/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        异常处理时抛出异常
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3/index.html">
+            
+                
+                    <a href="../chapter3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter3/section01.html">
+            
+                
+                    <a href="../chapter3/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        导入模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter3/section02.html">
+            
+                
+                    <a href="../chapter3/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        制作模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chapter3/section03.html">
+            
+                
+                    <a href="../chapter3/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        模块中的__all__
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="chapter3/section04.html">
+            
+                
+                    <a href="../chapter3/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        python中的包
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4.html">
+            
+                
+                    <a href="../chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        python2和Python3的区别
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >第十二天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x6355;&#x83B7;&#x5F02;&#x5E38;">&#x6355;&#x83B7;&#x5F02;&#x5E38;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">try</span>:
+    print(<span class="hljs-string">&apos;-----test--1---&apos;</span>)
+    open(<span class="hljs-string">&apos;123.txt&apos;</span>,<span class="hljs-string">&apos;r&apos;</span>)
+    print(<span class="hljs-string">&apos;-----test--2---&apos;</span>)
+<span class="hljs-keyword">except</span>:
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>&#x6B64;&#x7A0B;&#x5E8F;&#x770B;&#x4E0D;&#x5230;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#xFF0C;&#x56E0;&#x4E3A;&#x7528;except &#x6355;&#x83B7;&#x5230;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x4E86;&#x5904;&#x7406;&#x7684;&#x4EE3;&#x7801;</li>
+<li>pass &#x8868;&#x793A;&#x5B9E;&#x73B0;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x505A;&#xFF1B;&#x5982;&#x679C;&#x628A;pass&#x6539;&#x4E3A;print&#x8BED;&#x53E5;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x8F93;&#x51FA;&#x5176;&#x4ED6;&#x4FE1;&#x606F;</li>
+</ul>
+<p><img src="../imgs/%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8.png" alt=""></p>
+<p>&#x603B;&#x7ED3;&#xFF1A;</p>
+<ul>
+<li>&#x628A;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x653E;&#x5728;try&#x4E2D;</li>
+<li>&#x628A;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x653E;&#x5728;except&#x4E2D;</li>
+</ul>
+<h2 id="&#x6355;&#x83B7;&#x6307;&#x5B9A;&#x5F02;&#x5E38;">&#x6355;&#x83B7;&#x6307;&#x5B9A;&#x5F02;&#x5E38;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">try</span>:
+    print(num)
+<span class="hljs-keyword">except</span> IOError:
+    print(<span class="hljs-string">&apos;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x4E86;&apos;</span>)
+</code></pre>
+<p><img src="../imgs/%E6%8D%95%E8%8E%B7%E6%8C%87%E5%AE%9A%E5%BC%82%E5%B8%B8.png" alt=""></p>
+<p>&#x60F3;&#x4E00;&#x60F3;:</p>
+<blockquote>
+<p>&#x4E0A;&#x4F8B;&#x7A0B;&#x5E8F;&#xFF0C;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;except&#x6765;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x4E86;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x4F1A;&#x770B;&#x5230;&#x9519;&#x8BEF;&#x7684;&#x4FE1;&#x606F;&#x63D0;&#x793A;&#xFF1F;</p>
+</blockquote>
+<p>&#x7B54;:</p>
+<blockquote>
+<p>except&#x6355;&#x83B7;&#x7684;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x662F;IOError&#xFF0C;&#x800C;&#x6B64;&#x65F6;&#x7A0B;&#x5E8F;&#x4EA7;&#x751F;&#x7684;&#x5F02;&#x5E38;&#x4E3A; NameError &#xFF0C;&#x6240;&#x4EE5;except&#x6CA1;&#x6709;&#x751F;&#x6548;</p>
+</blockquote>
+<p>&#x4FEE;&#x6539;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E3A;:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">try</span>:
+    print(num)
+<span class="hljs-keyword">except</span> NameError:
+    print(<span class="hljs-string">&apos;&#x53D8;&#x91CF;&#x4F7F;&#x7528;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&apos;</span>)
+</code></pre>
+<h2 id="&#x6355;&#x83B7;&#x591A;&#x4E2A;&#x6307;&#x5B9A;&#x5F02;&#x5E38;">&#x6355;&#x83B7;&#x591A;&#x4E2A;&#x6307;&#x5B9A;&#x5F02;&#x5E38;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">try</span>:
+    print(<span class="hljs-string">&apos;-----test--1---&apos;</span>)
+    open(<span class="hljs-string">&apos;123.txt&apos;</span>,<span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-comment"># &#x5982;&#x679C;123.txt&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x4EA7;&#x751F; IOError &#x5F02;&#x5E38;</span>
+    print(<span class="hljs-string">&apos;-----test--2---&apos;</span>)
+    print(num)<span class="hljs-comment"># &#x5982;&#x679C;num&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x4EA7;&#x751F; NameError &#x5F02;&#x5E38;</span>
+
+<span class="hljs-keyword">except</span> (IOError,NameError): 
+    <span class="hljs-comment">#&#x5982;&#x679C;&#x60F3;&#x901A;&#x8FC7;&#x4E00;&#x6B21;except&#x6355;&#x83B7;&#x5230;&#x591A;&#x4E2A;&#x5F02;&#x5E38;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;</span>
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+<h3 id="&#x6CE8;&#x610F;&#xFF1A;">&#x6CE8;&#x610F;&#xFF1A;</h3>
+<p>&#x5F53;&#x6355;&#x83B7;&#x591A;&#x4E2A;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x8981;&#x6355;&#x83B7;&#x7684;&#x5F02;&#x5E38;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x653E;&#x5230;except &#x540E;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5143;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x5B58;&#x50A8;</p>
+<h2 id="&#x83B7;&#x53D6;&#x5F02;&#x5E38;&#x7684;&#x4FE1;&#x606F;&#x63CF;&#x8FF0;">&#x83B7;&#x53D6;&#x5F02;&#x5E38;&#x7684;&#x4FE1;&#x606F;&#x63CF;&#x8FF0;</h2>
+<p><img src="../imgs/%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF1.png" alt=""></p>
+<p><img src="../imgs/%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF2.png" alt=""></p>
+<h2 id="&#x8F93;&#x51FA;&#x5F02;&#x5E38;&#x4FE1;&#x606F;">&#x8F93;&#x51FA;&#x5F02;&#x5E38;&#x4FE1;&#x606F;</h2>
+<p><img src="../imgs/%E6%9C%AA%E4%BF%9D%E5%AD%98%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF.png" alt=""></p>
+<p><img src="../imgs/%E4%BF%9D%E5%AD%98%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF.png" alt=""></p>
+<h2 id="else&#x8BED;&#x53E5;">else&#x8BED;&#x53E5;</h2>
+<p>&#x54B1;&#x4EEC;&#x5E94;&#x8BE5;&#x5BF9;else&#x5E76;&#x4E0D;&#x964C;&#x751F;&#xFF0C;&#x5728;if&#x4E2D;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5F53;&#x6761;&#x4EF6;&#x4E0D;&#x6EE1;&#x8DB3;&#x65F6;&#x6267;&#x884C;&#x7684;&#x5B9E;&#x884C;&#xFF1B;&#x540C;&#x6837;&#x5728;try...except...&#x4E2D;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x5373;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x5230;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x6267;&#x884C;else&#x4E2D;&#x7684;&#x4E8B;&#x60C5;</p>
+<p>try:
+    num = 100
+    print(num)
+except NameError as errorMsg:
+    print(&apos;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x4E86;:%s&apos;%errorMsg)
+else:
+    print(&apos;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x5230;&#x5F02;&#x5E38;&#xFF0C;&#x771F;&#x9AD8;&#x5174;&apos;)
+&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:
+<img src="../imgs/try%E4%B8%AD%E7%9A%84else.png" alt=""></p>
+<h2 id="tryfinally">try..finally...</h2>
+<p>try...finally...&#x8BED;&#x53E5;&#x7528;&#x6765;&#x8868;&#x8FBE;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;:</p>
+<blockquote>
+<p>&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6BB5;&#x4EE3;&#x7801;&#x5FC5;&#x987B;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x65E0;&#x8BBA;&#x5F02;&#x5E38;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x90FD;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;finally&#x3002; &#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x5173;&#x95ED;&#xFF0C;&#x91CA;&#x653E;&#x9501;&#xFF0C;&#x628A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x8FD4;&#x8FD8;&#x7ED9;&#x8FDE;&#x63A5;&#x6C60;&#x7B49;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-keyword">try</span>:
+    f = open(<span class="hljs-string">&apos;test.txt&apos;</span>)
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+            content = f.readline()
+            <span class="hljs-keyword">if</span> len(content) == <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">break</span>
+            print(content)
+    <span class="hljs-keyword">except</span>:
+        <span class="hljs-comment">#&#x5982;&#x679C;&#x5728;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4EA7;&#x751F;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x6355;&#x83B7;&#x5230;</span>
+        <span class="hljs-comment">#&#x6BD4;&#x5982; &#x6309;&#x4E0B;&#x4E86; ctrl+c</span>
+        <span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">finally</span>:
+        f.close()
+        print(<span class="hljs-string">&apos;&#x5173;&#x95ED;&#x6587;&#x4EF6;&apos;</span>)
+<span class="hljs-keyword">except</span>:
+    print(<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&quot;</span>)
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;</p>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x5230;KeyboardInterrupt&#x5F02;&#x5E38;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x3002;&#x4F46;&#x662F;&#x5728;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x4E4B;&#x524D;&#xFF0C;finally&#x4ECE;&#x53E5;&#x4ECD;&#x7136;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x628A;&#x6587;&#x4EF6;&#x5173;&#x95ED;&#x3002;</p>
+</blockquote>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter2/index.html" class="navigation navigation-prev " aria-label="Previous page: 异常"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter2/section02.html" class="navigation navigation-next " aria-label="Next page: with的使用"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 第十二天 -->
+</html>

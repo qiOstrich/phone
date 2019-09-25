@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>break和continue的使用 | 学习目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter2/section03.html" />
+    
+    
+    <link rel="prev" href="../chapter2/section01.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.2"
+        data-chapter-title="break和continue的使用"
+        data-filepath="chapter2/section02.md"
+        data-basepath=".."
+        data-revision="Tue Apr 02 2019 10:55:11 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="../chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        条件判断语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter1/section01.html">
+            
+                
+                    <a href="../chapter1/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        if语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1/section02.html">
+            
+                
+                    <a href="../chapter1/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        if...else语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter1/section03.html">
+            
+                
+                    <a href="../chapter1/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        elif语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter1/section04.html">
+            
+                
+                    <a href="../chapter1/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        if语句嵌套
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter1/section05.html">
+            
+                
+                    <a href="../chapter1/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        应用：猜拳小游戏
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter1/section07.html">
+            
+                
+                    <a href="../chapter1/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        if语句补充
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2.html">
+            
+                
+                    <a href="../chapter2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        循环语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter2/section01.html">
+            
+                
+                    <a href="../chapter2/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        while语句
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="chapter2/section02.html">
+            
+                
+                    <a href="../chapter2/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        break和continue的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter2/section03.html">
+            
+                
+                    <a href="../chapter2/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        循环嵌套（难点）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter2/section04.html">
+            
+                
+                    <a href="../chapter2/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        for循环
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >学习目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="break&#x548C;continue">break&#x548C;continue</h1>
+<p>break&#x548C;continue&#x90FD;&#x7528;&#x5728;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x91CC;&#xFF0C;&#x7528;&#x6765;&#x63A7;&#x5236;&#x5FAA;&#x73AF;&#x3002;</p>
+<h2 id="break&#x7684;&#x4F7F;&#x7528;">break&#x7684;&#x4F7F;&#x7528;</h2>
+<p>&#x7ED3;&#x675F;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;&#x3002;</p>
+<pre><code class="lang-python">i = <span class="hljs-number">1</span>
+<span class="hljs-keyword">while</span> i &lt;= <span class="hljs-number">10</span>:
+    <span class="hljs-keyword">if</span> i == <span class="hljs-number">7</span>:
+        <span class="hljs-keyword">break</span>
+    print(i)
+    i += <span class="hljs-number">1</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x662F;:</p>
+<pre><code class="lang-python"><span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span>
+<span class="hljs-number">4</span>
+<span class="hljs-number">5</span>
+<span class="hljs-number">6</span>
+</code></pre>
+<h2 id="continue&#x7684;&#x4F7F;&#x7528;">continue&#x7684;&#x4F7F;&#x7528;</h2>
+<p>&#x7ED3;&#x675F;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x5F00;&#x59CB;&#x4E0B;&#x4E00;&#x8F6E;&#x5FAA;&#x73AF;&#x3002;</p>
+<pre><code class="lang-python">i = <span class="hljs-number">1</span>
+<span class="hljs-keyword">while</span> i &lt;= <span class="hljs-number">10</span>:
+    <span class="hljs-keyword">if</span> i == <span class="hljs-number">7</span>:
+        <span class="hljs-keyword">continue</span>
+    print(i)
+    i += <span class="hljs-number">1</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x662F;:</p>
+<pre><code class="lang-python"><span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span>
+<span class="hljs-number">4</span>
+<span class="hljs-number">5</span>
+<span class="hljs-number">6</span>
+<span class="hljs-number">8</span>
+<span class="hljs-number">9</span>
+<span class="hljs-number">10</span>
+</code></pre>
+<h2 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;</h2>
+<ol>
+<li>&#x6253;&#x5370; 1~100 &#x5185;&#xFF0C;&#x4E0D;&#x80FD;&#x88AB; 7 &#x6574;&#x9664;&#x7684;&#x6240;&#x6709;&#x6570;&#x5B57;&#x3002;</li>
+<li>&#x8BA1;&#x7B97; 1~100 &#x5185;&#xFF0C;&#x6240;&#x6709;&#x4E0D;&#x80FD;&#x88AB; 7 &#x6574;&#x9664;&#x7684;&#x6570;&#x5B57;&#x4E4B;&#x548C;&#x3002;</li>
+<li>&#x4E0D;&#x65AD;&#x7684;&#x8BE2;&#x95EE;&#x7528;&#x6237;&#xFF0C;&quot;&#x6211;&#x7231;&#x4F60;&#xFF0C;&#x4F60;&#x7231;&#x6211;&#x5417;?&quot;&#xFF0C;&#x53EA;&#x6709;&#x7528;&#x6237;&#x56DE;&#x7B54;&quot;&#x7231;&quot;&#x65F6;&#xFF0C;&#x7ED3;&#x675F;&#x5FAA;&#x73AF;&#x3002;</li>
+</ol>
+<h2 id="&#x6CE8;&#x610F;&#x70B9;">&#x6CE8;&#x610F;&#x70B9;</h2>
+<ol>
+<li>&#x5728;Python&#x4E2D;&#xFF0C;break&#x548C;continue&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x4E2D;&#x3002;</li>
+<li>break&#x548C;continue&#x5728;&#x5D4C;&#x5957;&#x5FAA;&#x73AF;&#x4E2D;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x53EA;&#x5BF9;&#x6700;&#x5185;&#x5C42;&#x5FAA;&#x73AF;&#x6709;&#x6548;&#x3002;</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter2/section01.html" class="navigation navigation-prev " aria-label="Previous page: while语句"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter2/section03.html" class="navigation navigation-next " aria-label="Next page: 循环嵌套（难点）"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

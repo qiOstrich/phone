@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第十四天 -->
+<!-- Start book 第十四天 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Python自带加密算法 | 第十四天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../01/section04.html" />
+    
+    
+    <link rel="prev" href="../01/section02.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="1.3"
+        data-chapter-title="Python自带加密算法"
+        data-filepath="01/section03.md"
+        data-basepath=".."
+        data-revision="Fri May 31 2019 07:36:50 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="../chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        加密方式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01/section01.html">
+            
+                
+                    <a href="../01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        base64编码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01/section02.html">
+            
+                
+                    <a href="../01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        常见加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="01/section03.html">
+            
+                
+                    <a href="../01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Python自带加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01/section04.html">
+            
+                
+                    <a href="../01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Pycryptodome第三方库
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="../chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        uuid
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="../chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        深拷贝与浅拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="../chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        property属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="../chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        魔法属性
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >第十四天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="hashlib&#x4E0E;hmac&#x6A21;&#x5757;&#x4ECB;&#x7ECD;">hashlib&#x4E0E;hmac&#x6A21;&#x5757;&#x4ECB;&#x7ECD;</h1>
+<p>hashlib&#x548C;hmac&#x90FD;&#x662F;python&#x5185;&#x7F6E;&#x7684;&#x52A0;&#x5BC6;&#x6A21;&#x5757;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x63D0;&#x4F9B;&#x5B9E;&#x73B0;&#x4E86;&#x5355;&#x5411;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;api&#x3002;</p>
+<h2 id="1-hashlib&#x6A21;&#x5757;&#x7B80;&#x4ECB;&#xFF1A;">1 hashlib&#x6A21;&#x5757;&#x7B80;&#x4ECB;&#xFF1A;</h2>
+<p>hashlib&#x6A21;&#x5757;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x5B89;&#x5168;&#x54C8;&#x5E0C;/&#x5B89;&#x5168;&#x6563;&#x5217;&#xFF08;Secure Hash Algorithm&#xFF09;&#x548C; &#x4FE1;&#x606F;&#x6458;&#x8981;&#x7B97;&#x6CD5;&#xFF08;Message Digest Algorithm&#xFF09;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x7684;&#x3001;&#x901A;&#x7528;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x5165;&#x53E3;&#x3002;&#x56E0;&#x4E3A;hashlib&#x6A21;&#x5757;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x6574;&#x5408;&#x4E86;md5&#x548C;sha&#x6A21;&#x5757;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x66F4;&#x591A;&#x4E2D;&#x7B97;&#x6CD5;&#x7684;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;&#xFF1A;MD5&#xFF0C;SHA1&#xFF0C;SHA224&#xFF0C;SHA256&#xFF0C;SHA384&#x548C;SHA512&#x3002;</p>
+<h3 id="11-md5&#x52A0;&#x5BC6;">1.1 MD5&#x52A0;&#x5BC6;</h3>
+<p>message-digest algorithm 5&#xFF08;&#x4FE1;&#x606F;-&#x6458;&#x8981;&#x7B97;&#x6CD5;&#xFF09;&#x3002;&#x7ECF;&#x5E38;&#x8BF4;&#x7684;&#x201C;MD5&#x52A0;&#x5BC6;&#x201D;&#xFF0C;&#x5C31;&#x662F;&#x4FE1;&#x606F;&#x6458;&#x8981;&#x7B97;&#x6CD5;&#x3002;
+md5&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x7B97;&#x6CD5;&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6216;&#x6587;&#x4EF6;&#xFF0C;&#x6216;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x6267;&#x884C;md5&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x4E3A;128bit&#x7684;&#x4E32;&#x3002;&#x8FD9;&#x4E2A;&#x4E32;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;
+MD5&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x662F;&#x4E0D;&#x53EF;&#x9006;&#x7684;&#xFF0C;&#x5373;&#x53EA;&#x6709;&#x4ECE;&#x660E;&#x6587;&#x5230;&#x5BC6;&#x6587;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x800C;&#x4ECE;&#x5BC6;&#x6587;&#x65E0;&#x6CD5;&#x8BA1;&#x7B97;&#x51FA;&#x660E;&#x6587;&#x3002;</p>
+<h4 id="md5&#x52A0;&#x5BC6;&#x5728;python&#x4E2D;&#x7684;&#x5B9E;&#x73B0;">MD5&#x52A0;&#x5BC6;&#x5728;Python&#x4E2D;&#x7684;&#x5B9E;&#x73B0;</h4>
+<p>&#x7531;&#x4E8E;MD5&#x6A21;&#x5757;&#x5728;python3&#x4E2D;&#x88AB;&#x79FB;&#x9664;&#xFF0C;&#x5728;python3&#x4E2D;&#x4F7F;&#x7528;<code>hashlib</code>&#x6A21;&#x5757;&#x8FDB;&#x884C;md5&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> hashlib
+
+<span class="hljs-comment"># &#x5F85;&#x52A0;&#x5BC6;&#x4FE1;&#x606F;</span>
+str = <span class="hljs-string">&apos;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&apos;</span>
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;md5&#x5BF9;&#x8C61;</span>
+hl = hashlib.md5()
+
+<span class="hljs-comment"># &#x6B64;&#x5904;&#x5FC5;&#x987B;&#x58F0;&#x660E;encode</span>
+<span class="hljs-comment"># &#x82E5;&#x5199;&#x6CD5;&#x4E3A;hl.update(str)  &#x62A5;&#x9519;&#x4E3A;&#xFF1A; Unicode-objects must be encoded before hashing</span>
+hl.update(str.encode(encoding=<span class="hljs-string">&apos;utf-8&apos;</span>))
+
+print(<span class="hljs-string">&apos;MD5&#x52A0;&#x5BC6;&#x524D;&#x4E3A; &#xFF1A;&apos;</span> + str)
+print(<span class="hljs-string">&apos;MD5&#x52A0;&#x5BC6;&#x540E;&#x4E3A; &#xFF1A;&apos;</span> + hl.hexdigest())
+</code></pre>
+<h3 id="12-sha&#x52A0;&#x5BC6;">1.2 SHA&#x52A0;&#x5BC6;</h3>
+<p>&#x5B89;&#x5168;&#x6563;&#x5217;&#x7B97;&#x6CD5;&#xFF08;&#x82F1;&#x8BED;&#xFF1A;Secure Hash Algorithm&#xFF0C;&#x7F29;&#x5199;&#x4E3A;SHA&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#x6563;&#x5217;&#x51FD;&#x6570;&#x5BB6;&#x65CF;&#x7684;&#x7B97;&#x6CD5;&#x3002;SHA1&#x57FA;&#x4E8E;MD5&#xFF0C;&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&#x66F4;&#x957F;&#xFF0C;&#x5B83;&#x5BF9;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;264&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x4EA7;&#x751F;&#x957F;&#x5EA6;&#x4E3A;160bit&#x7684;&#x6563;&#x5217;&#x503C;&#x3002;&#x6BD4;MD5&#x591A;32&#x4F4D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6BD4;MD5&#x66F4;&#x52A0;&#x5B89;&#x5168;&#xFF0C;&#x4F46;SHA1&#x7684;&#x8FD0;&#x7B97;&#x901F;&#x5EA6;&#x5C31;&#x6BD4;MD5&#x8981;&#x6162;&#x4E86;&#x3002;</p>
+<h4 id="sha&#x52A0;&#x5BC6;&#x5728;python&#x4E2D;&#x7684;&#x5B9E;&#x73B0;">sha&#x52A0;&#x5BC6;&#x5728;Python&#x4E2D;&#x7684;&#x5B9E;&#x73B0;</h4>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> hashlib
+h1 = hashlib.sha1(<span class="hljs-string">&apos;123456&apos;</span>.encode())
+print(h1.hexdigest())
+h2 = hashlib.sha224(<span class="hljs-string">&apos;123456&apos;</span>.encode())
+print(h2.hexdigest())
+h3 = hashlib.sha256(<span class="hljs-string">&apos;123456&apos;</span>.encode())
+print(h3.hexdigest())
+h4 = hashlib.sha384(<span class="hljs-string">&apos;123456&apos;</span>.encode())
+print(h4.hexdigest())
+</code></pre>
+<h2 id="2-hmac&#x4ECB;&#x7ECD;">2. hmac&#x4ECB;&#x7ECD;</h2>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#xFF0C;HMAC&#x7B97;&#x6CD5;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x4E00;&#x79CD;&#x5355;&#x9879;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x662F;&#x57FA;&#x4E8E;&#x4E0A;&#x9762;&#x5404;&#x79CD;&#x54C8;&#x5E0C;&#x7B97;&#x6CD5;/&#x6563;&#x5217;&#x7B97;&#x6CD5;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x7B97;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x6765;&#x589E;&#x589E;&#x5F3A;&#x5B89;&#x5168;&#x6027;&#x3002;hmac&#x6A21;&#x5757;&#x5B9E;&#x73B0;&#x4E86;HAMC&#x7B97;&#x6CD5;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x51FD;&#x6570;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x4E14;&#x4E0E;hashlib&#x63D0;&#x4F9B;&#x7684;api&#x57FA;&#x672C;&#x4E00;&#x81F4;&#x3002;</p>
+<h3 id="hmac-&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x5728;python&#x4E2D;&#x7684;&#x5B9E;&#x73B0;">hmac &#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x5728;Python&#x4E2D;&#x7684;&#x5B9E;&#x73B0;</h3>
+<pre><code class="lang-python">h = hmac.new(<span class="hljs-string">&apos;h&apos;</span>.encode(),<span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>.encode())
+result = h.hexdigest()
+print(result)  <span class="hljs-comment"># &#x83B7;&#x53D6;&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x7ED3;&#x679C;</span>
+
+<span class="hljs-comment"># &#x9A8C;&#x8BC1;&#x5BC6;&#x7801;</span>
+print(hmac.compare_digest(result, hmac.new(<span class="hljs-string">&apos;h&apos;</span>.encode(), <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>.encode()).hexdigest()))
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../01/section02.html" class="navigation navigation-prev " aria-label="Previous page: 常见加密算法"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../01/section04.html" class="navigation navigation-next " aria-label="Next page: Pycryptodome第三方库"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book 第十四天 -->
+<!-- End of book 第十四天 -->
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 第十四天 -->
+<!-- Start book 第十四天 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>深拷贝与浅拷贝 | 第十四天</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="chris Jiang">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./chapter04.html" />
+    
+    
+    <link rel="prev" href="./chapter02.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="3"
+        data-chapter-title="深拷贝与浅拷贝"
+        data-filepath="chapter03.md"
+        data-basepath="."
+        data-revision="Fri May 31 2019 07:36:50 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        学习目标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01.html">
+            
+                
+                    <a href="./chapter01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        加密方式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01/section01.html">
+            
+                
+                    <a href="./01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        base64编码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01/section02.html">
+            
+                
+                    <a href="./01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        常见加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01/section03.html">
+            
+                
+                    <a href="./01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Python自带加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01/section04.html">
+            
+                
+                    <a href="./01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Pycryptodome第三方库
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02.html">
+            
+                
+                    <a href="./chapter02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        uuid
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="chapter03.html">
+            
+                
+                    <a href="./chapter03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        深拷贝与浅拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04.html">
+            
+                
+                    <a href="./chapter04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        property属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05.html">
+            
+                
+                    <a href="./chapter05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        魔法属性
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >第十四天</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6DF1;&#x62F7;&#x8D1D;&#x4E0E;&#x6D45;&#x62F7;&#x8D1D;">&#x6DF1;&#x62F7;&#x8D1D;&#x4E0E;&#x6D45;&#x62F7;&#x8D1D;</h1>
+<h2 id="&#x6DF1;&#x62F7;&#x8D1D;&#x3001;&#x6D45;&#x62F7;&#x8D1D;">&#x6DF1;&#x62F7;&#x8D1D;&#x3001;&#x6D45;&#x62F7;&#x8D1D;</h2>
+<h3 id="1-&#x8D4B;&#x503C;&#x8FD0;&#x7B97;">1. &#x8D4B;&#x503C;&#x8FD0;&#x7B97;</h3>
+<p>Python&#x4E2D;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x90FD;&#x662F;&#x5F15;&#x7528;(&#x5373;&#x5185;&#x5B58;&#x5730;&#x5740;)&#x7684;&#x4F20;&#x9012;&#x3002;&#x5BF9;&#x4E8E;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x6765;&#x8BF4;&#xFF0C;&#x4FEE;&#x6539;&#x539F;&#x6570;&#x636E;&#x7684;&#x503C;&#xFF0C;&#x4F1A;&#x6539;&#x53D8;&#x8D4B;&#x503C;&#x5BF9;&#x8C61;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-python">a = [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>]
+b = [<span class="hljs-number">33</span>, <span class="hljs-number">44</span>]
+c = [a,b,<span class="hljs-string">&apos;hello&apos;</span>]
+<span class="hljs-comment"># &#x8D4B;&#x503C;&#x662F;&#x5F15;&#x7528;&#x4F20;&#x9012;</span>
+d = c
+<span class="hljs-comment"># c &#x548C; d &#x6307;&#x5411;&#x7684;&#x5176;&#x5B9E;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;</span>
+print(c <span class="hljs-keyword">is</span> d)
+
+print(c) <span class="hljs-comment"># [[11, 22], [33, 44], &apos;hello&apos;]</span>
+print(d) <span class="hljs-comment"># [[11, 22], [33, 44], &apos;hello&apos;]</span>
+
+a.append(<span class="hljs-number">100</span>)
+c.append(<span class="hljs-string">&apos;hi&apos;</span>)
+
+print(c) <span class="hljs-comment"># [[11, 22, 100], [33, 44], &apos;hello&apos;, &apos;hi&apos;]</span>
+print(d) <span class="hljs-comment"># [[11, 22, 100], [33, 44], &apos;hello&apos;, &apos;hi&apos;]</span>
+</code></pre>
+<h3 id="2-&#x6D45;&#x62F7;&#x8D1D;">2. &#x6D45;&#x62F7;&#x8D1D;</h3>
+<ul>
+<li>&#x6D45;&#x62F7;&#x8D1D;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x9876;&#x5C42;&#x62F7;&#x8D1D;</li>
+</ul>
+<p>&#x901A;&#x4FD7;&#x7684;&#x7406;&#x89E3;&#x662F;&#xFF1A;&#x62F7;&#x8D1D;&#x4E86;&#x5F15;&#x7528;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x62F7;&#x8D1D;&#x5185;&#x5BB9;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> copy
+
+a = [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>]
+b = [<span class="hljs-number">33</span>, <span class="hljs-number">44</span>]
+c = [a,b,<span class="hljs-string">&apos;hello&apos;</span>]
+
+<span class="hljs-comment"># copy &#x662F;&#x6D45;&#x62F7;&#x8D1D;&#xFF0C;&#x4F1A;&#x628A;&#x5BF9;&#x8C61;&#x6700;&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x5C42;&#x62F7;&#x8D1D;&#x8D70;</span>
+d = copy.copy(c)
+
+<span class="hljs-comment"># c &#x548C; d &#x662F;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;</span>
+print(c <span class="hljs-keyword">is</span> d )  <span class="hljs-comment"># False</span>
+<span class="hljs-comment"># c[0] &#x548C; d[0] &#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6D45;&#x62F7;&#x8D1D;&#x53EA;&#x62F7;&#x8D1D;&#x6700;&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x5C42;&#x5BF9;&#x8C61;</span>
+print(c[<span class="hljs-number">0</span>] <span class="hljs-keyword">is</span> d[<span class="hljs-number">0</span>]) <span class="hljs-comment"># True</span>
+print(c[<span class="hljs-number">1</span>] <span class="hljs-keyword">is</span> d[<span class="hljs-number">1</span>]) <span class="hljs-comment"># True</span>
+
+print(c) <span class="hljs-comment"># [[11, 22], [33, 44], &apos;hello&apos;]</span>
+print(d) <span class="hljs-comment"># [[11, 22], [33, 44], &apos;hello&apos;]</span>
+
+<span class="hljs-comment"># &#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x88AB;&#x62F7;&#x8D1D;&#x8D70;&#xFF0C;&#x6240;&#x4EE5;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x5185;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x5230;d</span>
+a.append(<span class="hljs-number">100</span>)
+<span class="hljs-comment"># &#x6700;&#x5916;&#x5C42;&#x5BF9;&#x8C61;&#x5DF2;&#x7ECF;&#x88AB;&#x62F7;&#x8D1D;&#x8D70;&#x4E86;&#xFF0C;&#x4FEE;&#x6539;&#x6700;&#x5916;&#x5C42;&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;d</span>
+c.append(<span class="hljs-string">&apos;hi&apos;</span>)
+
+print(c) <span class="hljs-comment"># [[11, 22, 100], [33, 44], &apos;hello&apos;, &apos;hi&apos;]</span>
+print(d) <span class="hljs-comment"># [[11, 22, 100], [33, 44], &apos;hello&apos;]</span>
+</code></pre>
+<h3 id="3-&#x6DF1;&#x62F7;&#x8D1D;">3. &#x6DF1;&#x62F7;&#x8D1D;</h3>
+<ul>
+<li>&#x6DF1;&#x62F7;&#x8D1D;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6240;&#x6709;&#x5C42;&#x6B21;&#x7684;&#x62F7;&#x8D1D;(&#x9012;&#x5F52;)</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> copy
+
+a = [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>]
+b = [<span class="hljs-number">33</span>, <span class="hljs-number">44</span>]
+c = [a,b,<span class="hljs-string">&apos;hello&apos;</span>]
+
+<span class="hljs-comment"># d &#x662F;&#x5BF9;&#x8C61;c&#x7684;&#x6DF1;&#x62F7;&#x8D1D;</span>
+d = copy.deepcopy(c)
+
+<span class="hljs-comment"># c &#x548C; d&#x662F;&#x4E24;&#x4E2A;&#x5B8C;&#x5168;&#x7684;&#x5BF9;&#x8C61;</span>
+print(c <span class="hljs-keyword">is</span> d)  <span class="hljs-comment"># False</span>
+
+<span class="hljs-comment"># d&#x91CC;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E5F;&#x90FD;&#x548C;c&#x4E0D;&#x540C;</span>
+print(c[<span class="hljs-number">0</span>] <span class="hljs-keyword">is</span> d[<span class="hljs-number">0</span>])
+print(c[<span class="hljs-number">1</span>] <span class="hljs-keyword">is</span> d[<span class="hljs-number">1</span>])
+
+print(c) <span class="hljs-comment">#[[11, 22], [33, 44], &apos;hello&apos;]</span>
+print(d) <span class="hljs-comment">#[[11, 22], [33, 44], &apos;hello&apos;]</span>
+
+a.append(<span class="hljs-number">100</span>)
+c.append(<span class="hljs-string">&apos;hi&apos;</span>)
+
+print(c) <span class="hljs-comment">#[[11, 22, 100], [33, 44], &apos;hello&apos;,&apos;hi&apos;]</span>
+print(d) <span class="hljs-comment">#[[11, 22], [33, 44], &apos;hello&apos;]</span>
+</code></pre>
+<h3 id="4-&#x62F7;&#x8D1D;&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;">4. &#x62F7;&#x8D1D;&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;</h3>
+<ul>
+<li>&#x5207;&#x7247;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x79CD;&#x6D45;&#x62F7;&#x8D1D;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> copy
+
+a = [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>]
+b = [<span class="hljs-number">33</span>, <span class="hljs-number">44</span>]
+c = [a,b,<span class="hljs-string">&apos;hello&apos;</span>]
+d = c[:]
+
+print(c <span class="hljs-keyword">is</span> d)
+print(c[<span class="hljs-number">0</span>] <span class="hljs-keyword">is</span> d[<span class="hljs-number">0</span>])
+print(c[<span class="hljs-number">1</span>] <span class="hljs-keyword">is</span> d[<span class="hljs-number">1</span>])
+
+print(c)
+print(d)
+
+a.append(<span class="hljs-number">100</span>)
+c.append(<span class="hljs-string">&apos;hi&apos;</span>)
+
+print(c)
+print(d)
+</code></pre>
+<ul>
+<li>&#x5B57;&#x5178;&#x7684;copy&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6D45;&#x62F7;&#x8D1D;&#x4E00;&#x4E2A;&#x5B57;&#x5178;</li>
+</ul>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;zhangsan&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">18</span>, <span class="hljs-string">&apos;hobby&apos;</span>: [<span class="hljs-string">&apos;run&apos;</span>, <span class="hljs-string">&apos;basketball&apos;</span>]}
+d = info.copy()
+
+<span class="hljs-comment"># &#x5B57;&#x5178;&#x7684;copy&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x79CD;&#x6D45;&#x62F7;&#x8D1D;&#xFF0C;&#x53EA;&#x62F7;&#x8D1D;&#x4E86;&#x6700;&#x4E0A;&#x5C42;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0B;&#x5C42;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x62F7;&#x8D1D;&#xFF0C;&#x53EA;&#x662F;&#x5F15;&#x7528;</span>
+print(info <span class="hljs-keyword">is</span> d)  <span class="hljs-comment"># False</span>
+print(info[<span class="hljs-string">&apos;hobby&apos;</span>] <span class="hljs-keyword">is</span> d[<span class="hljs-string">&apos;hobby&apos;</span>])  <span class="hljs-comment"># True</span>
+
+info[<span class="hljs-string">&apos;name&apos;</span>] = <span class="hljs-string">&apos;lisi&apos;</span>
+info[<span class="hljs-string">&apos;hobby&apos;</span>].append(<span class="hljs-string">&apos;volleyball&apos;</span>)
+print(info) <span class="hljs-comment"># {&apos;name&apos;: &apos;lisi&apos;, &apos;age&apos;: 18, &apos;hobby&apos;: [&apos;run&apos;, &apos;basketball&apos;, &apos;volleyball&apos;]}</span>
+print(d) <span class="hljs-comment"># {&apos;name&apos;: &apos;zhangsan&apos;, &apos;age&apos;: 18, &apos;hobby&apos;: [&apos;run&apos;, &apos;basketball&apos;, &apos;volleyball&apos;]}</span>
+</code></pre>
+<h3 id="5-&#x6CE8;&#x610F;&#x70B9;">5. &#x6CE8;&#x610F;&#x70B9;</h3>
+<h4 id="&#x6D45;&#x62F7;&#x8D1D;&#x5BF9;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x548C;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x7684;copy&#x4E0D;&#x540C;">&#x6D45;&#x62F7;&#x8D1D;&#x5BF9;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x548C;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x7684;copy&#x4E0D;&#x540C;</h4>
+<ol>
+<li>copy.copy&#x5BF9;&#x4E8E;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#xFF0C;&#x4F1A;&#x8FDB;&#x884C;&#x6D45;&#x62F7;&#x8D1D;</li>
+<li>copy.copy&#x5BF9;&#x4E8E;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x4F1A;&#x62F7;&#x8D1D;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x6307;&#x5411;</li>
+</ol>
+<pre><code class="lang-python">In [<span class="hljs-number">88</span>]: a = [<span class="hljs-number">11</span>,<span class="hljs-number">22</span>,<span class="hljs-number">33</span>]
+In [<span class="hljs-number">89</span>]: b = copy.copy(a)
+In [<span class="hljs-number">90</span>]: id(a)
+Out[<span class="hljs-number">90</span>]: <span class="hljs-number">59275144</span>
+In [<span class="hljs-number">91</span>]: id(b)
+Out[<span class="hljs-number">91</span>]: <span class="hljs-number">59525600</span>
+In [<span class="hljs-number">92</span>]: a.append(<span class="hljs-number">44</span>)
+In [<span class="hljs-number">93</span>]: a
+Out[<span class="hljs-number">93</span>]: [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>, <span class="hljs-number">33</span>, <span class="hljs-number">44</span>]
+In [<span class="hljs-number">94</span>]: b
+Out[<span class="hljs-number">94</span>]: [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>, <span class="hljs-number">33</span>]
+
+
+In [<span class="hljs-number">95</span>]: a = (<span class="hljs-number">11</span>,<span class="hljs-number">22</span>,<span class="hljs-number">33</span>)
+In [<span class="hljs-number">96</span>]: b = copy.copy(a)
+In [<span class="hljs-number">97</span>]: id(a)
+Out[<span class="hljs-number">97</span>]: <span class="hljs-number">58890680</span>
+In [<span class="hljs-number">98</span>]: id(b)
+Out[<span class="hljs-number">98</span>]: <span class="hljs-number">58890680</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./chapter02.html" class="navigation navigation-prev " aria-label="Previous page: uuid"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./chapter04.html" class="navigation navigation-next " aria-label="Next page: property属性"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book 第十四天 -->
+<!-- End of book 第十四天 -->
+</html>
