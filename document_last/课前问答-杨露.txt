@@ -1,0 +1,84 @@
+with
+- file
+- socket
+- threading.Lock
+- context
+
+
+class A:
+    def __enter__(self):
+        print('running __enter__')
+        return self
+
+    def __exit__(self, a1, a2, a3):
+        print('running __exit__')
+        print('a1: %s' % a1)
+        print('a2: %s' % a2)
+        print('a3: %s' % a3)
+
+
+with A() as a:
+    print('a is %s' % a)
+    raise InterruptedError('程序被打断')
+
+================================================================================
+
+静态方法 类方法
+
+class Test(object):
+    x = 123
+
+    def __init__(self):
+        self.y = 456
+
+    def bar1(self):
+        print('i am a method')
+
+    @classmethod
+    def bar2(cls):
+        print('i am a classmethod')
+
+    @staticmethod
+    def bar3():
+        print('i am a staticmethod')
+
+    def foo1(self):
+        print(self.x)
+        print(self.y)
+        self.bar1()
+        self.bar2()
+        self.bar3()
+
+    @classmethod
+    def foo2(cls):
+        print(cls.x)
+        # print(cls.y)
+        # cls.bar1()
+        cls.bar2()
+        cls.bar3()
+
+    @staticmethod
+    def foo3():
+        print(cls.x)
+        print(self.y)
+        self.bar1()
+        cls.bar2()
+        cls.bar3()
+
+================================================================================
+
+内存管理
+    - 内存池
+        - 小整数对象: [-5, 256]
+        - 其他数据缓存
+    - 垃圾收集
+        - 引用计数
+        - 标记清除
+        - 分代收集
+
+================================================================================
+
+CPU占用: top
+内存占用: free / top
+硬盘占用: df / du / iostat
+网络占用: netstat

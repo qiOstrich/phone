@@ -1,0 +1,45 @@
+开发中遇到的问题
+    高并发
+        加机器
+        RPS
+        主从复制
+    数据库连接
+
+--------------------------------------------------------------------------------
+
+查询那个程序占用着8000端口
+netstat -nlp|grep 8000
+lsof
+
+--------------------------------------------------------------------------------
+
+nginx 在项目中的作用
+- 反向代理：
+                   / Django
+    user -> proxy -> Flask
+                   \ Tornado
+- 加载静态文件
+- 负载均衡
+    - 轮询
+    - 权重 (加权轮询)
+    - 最小连接数
+    - IP Hash
+              / server-0 <- ip1, ip2
+        Nginx - server-1 <- ip3
+              \ server-2
+
+        ip1 = '115.94.23.41'
+        ip2 = '187.2.4.5'
+        ip3 = '196.5.3.21'
+
+        md5  sha1  crc32 python-hash
+
+    user -> nginx -> uwsgi -> django
+    user -> nginx -> gunicorn -> django
+
+
+import socket
+s = socket.socket()
+s.bind(('localhost', 8000))
+s.listen(1000)
+s.accept()

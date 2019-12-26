@@ -1,0 +1,33 @@
+购物商城
+- 七个月
+- 购物车
+
+探探
+- 八个月
+
+数据后台
+
+
+nginx
+
+WSGI
+
+列举 5 个 Python 标准库
+
+Django 中间件
+
+列举 5 个 Linux 命令
+chmod
+wget
+ps
+top
+touch
+cat
+pwd
+watch
+lsof
+
+vim
+htop
+
+cd / ls / mv / cp / mkdir

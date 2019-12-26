@@ -1,0 +1,61 @@
+主动运算
+被动运算
+    惰性求值
+    迭代器
+
+
+
+优惠券
+
+id  name  start   end    duration    valve   reduce  b_type   b_shop
+
+
+
+
+用户的优惠券表
+id   uid   yhq_id   num   start     end
+      7        10     1    12-3   12-10
+
+now = datetime.now()
+for yhq in xxx:
+    if yhq.start <= now <= yhq.end:
+        pass
+
+
+
+用户表
+======
+id   name   vip_id         end_time
+1    涂有武       5      '2020-12-03'
+
+
+
+会员表
+======
+id   name         level   money    duration
+1    非会员           0       0    99999999
+2  青铜会员(月卡)      1      10           30
+3  青铜会员(季卡)      1      25           90
+4  青铜会员(年卡)      1     100           365
+5  白银会员(年卡)      2     200           365
+
+
+权限表
+======
+id   name           desc
+1    superlike      'xxxxxxxxx'
+2    rewind         'xxxxxxxxx'
+3    who_liked_me   'xxxxxxxxx'
+
+
+会员权限的关系表
+==============
+id    vip_level    perm_id
+ 1         1          1
+ 2         2          1
+ 3         2          2
+
+
+青铜会员: superlike
+白银会员: superlike + rewind
+黄金会员: superlike + rewind + who_liked_me

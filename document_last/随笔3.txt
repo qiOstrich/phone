@@ -1,0 +1,60 @@
+request.GET
+request.POST
+request.COOKIES
+request.FILES
+request.META['REMOTE_ADDR']
+request.META['HTTP_USER_AGENT']
+request.session
+
+
+1. Django 接收请求报文
+2. 由 WSGI 将 “请求报文” 封装成 HttpRequest 对象
+-------------------------------------------------> process_request
+3. 进行 URL 匹配，得到一个 View 函数
+-------------------------------------------------> process_view
+4. 执行视图函数
+    获取参数
+    执行逻辑
+    ---------------------------------------------> process_template
+    模板渲染
+    返回 HttpResponse 对象
+    ---------------------------------------------> process_exception
+-------------------------------------------------> process_response
+5. 将 HttpResponse 对象封装成报文
+6. 返回给客户端
+
+
+加密:
+    对称加密:
+        AES, DES, TEA
+    非对称加密:
+        RSA, ED25519
+
+编码:
+    base64, uuid4, utf8, gbk
+
+哈希:
+    md5, crc32, shasum256, 不可逆
+
+
+对称加密
+
+    原文: abcdefg
+           |  ^
+           V  |
+    密码: 12345678
+           |  ^
+           V  |
+    密文: ahgsd0fui
+
+
+非对称加密
+
+    原文:     abcdefghijk
+                |   ^
+                V   |
+    公钥:     54321
+    私钥:           123456789
+                |    ^
+                V    |
+    密文:   ahgasdlkfsd0fuijasgd

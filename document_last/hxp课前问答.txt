@@ -1,0 +1,94 @@
+Python 的缺点: 性能
+- 计算密集型: 大数据、科学运算、图形图像处理
+- I/O 密集型:
+    - 大量网络I/O
+    - 多任务并发处理
+        - 多进程
+        - 多线程
+        - 多协程
+    - Python 的多线程被 GIL 所限制:
+        - 单个进程之内同一时刻只能有一个线程在运行
+        - Python 多线程能使用多个 CPU 核心，但是同一瞬间只能使用一个
+        - Python如果想利用多核优势只能使用多进程，一般有几个 CPU 就开启几个进程
+
+
+时间轴: ------------------------------------------------------------------------->
+Thread 1: ---->               ---->     ---->               ---->     ---->
+Thread 2:           ---->          ---->          ---->          ---->
+Thread 3:      ---->     ---->               ---->     ---->               ---->
+
+
+GIL 与 threading.Lock
+
+x = 0
+
+x = x + 1
+
+         |x=0  x=0+1|
+Thread1: |---->---->|
+Thread2:            |---->---->|
+                    |x=1  x=0+1|
+
+
+
+可迭代对象
+    - str, bytes, tuple, list, dict, set
+    - range
+    - 迭代器
+        - 生成器
+
+range 的结果是一个 range 对象，是一个可迭代对象
+
+
+迭代器、生成器、range对象 的优点: 节省内存
+
+
+class A:
+    def __init__(self):
+        self.count = 10
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.count > 0:
+            self.count -= 1
+            return self.count
+        else:
+            raise StopIteration
+
+
+def foo():
+    print(111)
+    yield 222
+    print(333)
+    yield 444
+    print(555)
+
+
+如何检查服务器伤的内存占用: top, free
+
+top
+- total
+- used
+- free
+- buf/cache
+
+quick_sort
+
+
+数据库
+- 优化
+- 事务、锁
+- 查询语句
+- 表结构设计
+- 主从复制、读写分离
+
+Linux
+项目里的功能点、技术点
+性能：
+- 优化
+- 并发
+    - 多线程、多进程、协程
+    - IO多路复用
+    - 线上怎么提高并发
